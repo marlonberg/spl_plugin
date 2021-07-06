@@ -1,0 +1,22 @@
+<idea-plugin>
+    <id>org.example.spl_plugin</id>
+    <name>SPL Language Support</name>
+    <vendor email="marlon.berg@mni.thm.de" url="">THM</vendor>
+
+    <description><![CDATA[
+    A Plugin for Simple Programming Language (SPL)<br>
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileType name="SPL File" implementationClass="org.intellij.sdk.language.SPLFileType"
+                  fieldName="INSTANCE" language="SPL" extensions="spl"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
