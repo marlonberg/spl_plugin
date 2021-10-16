@@ -1,2 +1,0 @@
-org/intellij/sdk/language/SplCodeInsightTest.java
- org.intellij.sdk.language.SplCodeInsightTest
