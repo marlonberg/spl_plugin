@@ -1,16 +1,163 @@
 <application>
   <component name="ActionsLocalSummary">
+    <e n="$Undo">
+      <i c="70" l="1634142094818" />
+    </e>
+    <e n="CodeCompletion">
+      <i c="41" l="1633794593529" />
+    </e>
+    <e n="EditSource">
+      <i c="1" l="1629194688907" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="126" l="1634392294750" />
+    </e>
+    <e n="EditorChooseLookupItem">
+      <i c="2" l="1633794594711" />
+    </e>
+    <e n="EditorCopy">
+      <i c="2" l="1634142084815" />
+    </e>
+    <e n="EditorCut">
+      <i c="1" l="1634142080629" />
+    </e>
+    <e n="EditorDelete">
+      <i c="3" l="1633794589708" />
+    </e>
+    <e n="EditorDeleteLine">
+      <i c="1" l="1633785481677" />
+    </e>
+    <e n="EditorDown">
+      <i c="1" l="1629282053071" />
+    </e>
+    <e n="EditorDuplicate">
+      <i c="3" l="1634392247335" />
+    </e>
+    <e n="EditorEnter">
+      <i c="15" l="1634392267530" />
+    </e>
+    <e n="EditorLeft">
+      <i c="3" l="1634392284625" />
+    </e>
+    <e n="EditorPaste">
+      <i c="2" l="1634142086520" />
+    </e>
+    <e n="EditorRight">
+      <i c="7" l="1633794726616" />
+    </e>
+    <e n="EditorSplitLine">
+      <i c="6" l="1633794450698" />
+    </e>
+    <e n="EditorTab">
+      <i c="1" l="1634144725216" />
+    </e>
+    <e n="EditorUp">
+      <i c="5" l="1632218557948" />
+    </e>
+    <e n="ExpandRegion">
+      <i c="1" l="1633614692673" />
+    </e>
+    <e n="FindSelectionInPath">
+      <i c="1" l="1633614654735" />
+    </e>
+    <e n="FindUsages">
+      <i c="8" l="1633700334674" />
+    </e>
+    <e n="GotoDeclaration">
+      <i c="129" l="1634157375810" />
+    </e>
+    <e n="InspectCode">
+      <i c="4" l="1633614722880" />
+    </e>
+    <e n="NewClass">
+      <i c="1" l="1632491838531" />
+    </e>
     <e n="NewDir">
       <i c="1" l="1625561639694" />
     </e>
     <e n="NewFile">
       <i c="1" l="1625561665364" />
     </e>
+    <e n="NextTemplateVariable">
+      <i c="2" l="1633638518467" />
+    </e>
+    <e n="PsiViewer">
+      <i c="2" l="1633558278926" />
+    </e>
+    <e n="PsiViewerForContext">
+      <i c="5" l="1633711630127" />
+    </e>
+    <e n="RenameElement">
+      <i c="5" l="1633736393597" />
+    </e>
+    <e n="Run">
+      <i c="1" l="1633633492581" />
+    </e>
+    <e n="SaveAll">
+      <i c="1" l="1633557926621" />
+    </e>
+    <e n="ShowIntentionActions">
+      <i c="3" l="1633631316192" />
+    </e>
+    <e n="ShowProjectStructureSettings">
+      <i c="1" l="1632218913276" />
+    </e>
+    <e n="ShowSettings">
+      <i c="1" l="1632218931248" />
+    </e>
+    <e n="ShowUsages">
+      <i c="1" l="1633649804069" />
+    </e>
+    <e n="ToggleLineBreakpoint">
+      <i c="2" l="1634142092765" />
+    </e>
+    <e n="UsageGrouping.FileStructure">
+      <i c="2" l="1633718322819" />
+    </e>
     <e n="WelcomeScreen.CreateNewProject">
       <i c="1" l="1625561503701" />
     </e>
+    <e n="WelcomeScreen.OpenProject">
+      <i c="1" l="1628067703735" />
+    </e>
+    <e n="com.intellij.codeInsight.daemon.NavigateAction">
+      <i c="5" l="1634142091157" />
+    </e>
+    <e n="com.intellij.diagnostic.IdeMessagePanel$4">
+      <i c="1" l="1632152211570" />
+    </e>
+    <e n="com.intellij.execution.lineMarker.LineMarkerActionWrapper">
+      <i c="1" l="1633630066204" />
+    </e>
+    <e n="com.intellij.ide.projectView.actions.MarkSourceRootAction">
+      <i c="1" l="1632491834702" />
+    </e>
+    <e n="com.intellij.openapi.editor.impl.EditorMarkupModelImpl$StatusAction">
+      <i c="3" l="1633706382031" />
+    </e>
+    <e n="com.intellij.openapi.editor.impl.InspectionPopupManager$MenuAction">
+      <i c="1" l="1628078467074" />
+    </e>
     <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
-      <i c="1" l="1625561599036" />
+      <i c="2" l="1628067741083" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.ToolWindowHeader$HideAction">
+      <i c="1" l="1633706384164" />
+    </e>
+    <e n="com.intellij.usages.impl.ShowImportsAction">
+      <i c="3" l="1634156682868" />
+    </e>
+    <e n="com.intellij.usages.impl.UsageFilteringRuleProviderImpl$ShowReadAccessUsagesAction">
+      <i c="5" l="1633718331123" />
+    </e>
+    <e n="com.intellij.usages.impl.UsageFilteringRuleProviderImpl$ShowWriteAccessUsagesAction">
+      <i c="3" l="1633718325575" />
+    </e>
+    <e n="com.intellij.usages.impl.UsageInGeneratedCodeToggleAction">
+      <i c="1" l="1633718323416" />
+    </e>
+    <e n="com.intellij.usages.impl.UsageViewImpl$MergeDupLines">
+      <i c="3" l="1633718324477" />
     </e>
   </component>
 </application>

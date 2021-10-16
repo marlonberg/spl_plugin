@@ -4,16 +4,35 @@
     <vendor email="marlon.berg@mni.thm.de" url="">THM</vendor>
 
     <description><![CDATA[
-    A Plugin for Simple Programming Language (SPL)<br>
+    A Plugin for Spl Programming Language (SPL)<br>
     ]]></description>
 
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <fileType name="SPL File" implementationClass="org.intellij.sdk.language.SPLFileType"
+        <fileType name="SPL File" implementationClass="org.intellij.sdk.language.SplFileType"
                   fieldName="INSTANCE" language="SPL" extensions="spl"/>
+        <lang.parserDefinition language="SPL"
+                               implementationClass="org.intellij.sdk.language.SplParserDefinition"/>
+        <lang.syntaxHighlighterFactory language="SPL"
+                                       implementationClass="org.intellij.sdk.language.SplSyntaxHighlighterFactory"/>
+        <colorSettingsPage implementation="org.intellij.sdk.language.SplColorSettingsPage"/>
+        <annotator language="SPL" implementationClass="org.intellij.sdk.language.SplAnnotator"/>
+        <lang.refactoringSupport language="SPL"
+                                 implementationClass="org.intellij.sdk.language.SplRefactoringSupportProvider"/>
+        <lang.findUsagesProvider language="SPL"
+                                 implementationClass="org.intellij.sdk.language.SplFindUsagesProvider"/>
+        <completion.contributor language="SPL"
+                                implementationClass="org.intellij.sdk.language.SplCompletionContributor"/>
+        <psi.referenceContributor language="SPL"
+                implementation="org.intellij.sdk.language.SplReferenceContributor"/>
+        <codeInsight.lineMarkerProvider language="SPL"
+                                        implementationClass="org.intellij.sdk.language.SplLineMarkerProvider"/>
+        <lang.foldingBuilder language="SPL"
+                             implementationClass="org.intellij.sdk.language.SplFoldingBuilder"/>
     </extensions>
 
     <actions>

@@ -4,12 +4,24 @@
       <map>
         <entry key="$USER_HOME$/IdeaProjects/SPLTest">
           <value>
-            <RecentProjectMetaInfo opened="true" projectWorkspaceId="1uw0qu3lAJImgmvczHoYhU0S8ju">
+            <RecentProjectMetaInfo projectWorkspaceId="1uw0qu3lAJImgmvczHoYhU0S8ju">
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
               <option name="build" value="IC-211.7628.21" />
               <option name="buildTimestamp" value="1625054670096" />
               <option name="productionCode" value="IC" />
               <option name="projectOpenTimestamp" value="1625561544935" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Documents/Uni/Thesis/SPLTest">
+          <value>
+            <RecentProjectMetaInfo frameTitle="SPLTest – test.spl" opened="true" projectWorkspaceId="1uw0qu3lAJImgmvczHoYhU0S8ju">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-212.4746.92" />
+              <option name="buildTimestamp" value="1627369738168" />
+              <frame x="-9" y="-9" width="1938" height="1048" extendedState="6" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1628067722782" />
             </RecentProjectMetaInfo>
           </value>
         </entry>

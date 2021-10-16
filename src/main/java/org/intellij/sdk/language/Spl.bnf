@@ -1,0 +1,76 @@
+{
+  parserClass="org.intellij.sdk.language.parser.SplParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Spl"
+  psiImplClassSuffix="Impl"
+  psiPackage="org.intellij.sdk.language.psi"
+  psiImplPackage="org.intellij.sdk.language.psi.impl"
+
+  elementTypeHolderClass="org.intellij.sdk.language.psi.SplTypes"
+  elementTypeClass="org.intellij.sdk.language.psi.SplElementType"
+  tokenTypeClass="org.intellij.sdk.language.psi.SplTokenType"
+
+  psiImplUtilClass="org.intellij.sdk.language.psi.impl.SplPsiImplUtil"
+}
+
+splFile ::= (COMMENT|typedecl|procdecl)+
+
+arr             ::= ARRAY LBRACK INTLIT RBRACK OF arr | ARRAY LBRACK INTLIT RBRACK OF typeusage;
+
+procname        ::= IDENT {
+                       mixin="org.intellij.sdk.language.psi.impl.SplNamedElementImpl"
+                       implements="org.intellij.sdk.language.psi.SplNamedElement"
+                       methods=[getName setName getNameIdentifier]
+                       }
+
+procusage       ::= IDENT {methods=[getReferences]}
+
+typename        ::= IDENT {
+                     mixin="org.intellij.sdk.language.psi.impl.SplNamedElementImpl"
+                     implements="org.intellij.sdk.language.psi.SplNamedElement"
+                     methods=[getName setName getNameIdentifier]
+                     }
+
+typeusage       ::= IDENT {methods=[getReferences]}
+
+typedecl        ::= TYPE typename EQ typeusage SEMIC
+                | TYPE typename EQ arr SEMIC
+
+procdecl        ::= PROC procname LPAREN paramlist? RPAREN LCURL vardecllist? statementlist? RCURL;
+
+dim             ::= LBRACK exprlist RBRACK dim?;
+
+uminus          ::= MINUS;
+
+exprlist        ::= expr (COMMA expr)* COMMENT*;
+expr            ::= (INTLIT | varusage dim?) ((PLUS|MINUS|STAR|SLASH|EQ|NE|LT|LE|GT|GE) expr)? | LPAREN expr RPAREN | uminus expr;
+
+paramlist       ::= param (param| COMMA param)* COMMENT*;
+param           ::= REF varname COLON typeusage
+                |   varname COLON typeusage;
+
+arglist         ::= exprlist (COMMA arglist)* COMMENT*;
+
+statementlist   ::= (COMMENT* statement COMMENT*)+;
+statement       ::= SEMIC
+                |   varusage ASGN exprlist SEMIC
+                |   varusage dim ASGN exprlist SEMIC
+                |   IF LPAREN exprlist RPAREN statement (ELSE statement)?
+                |   WHILE LPAREN exprlist RPAREN statement
+                |   procusage LPAREN RPAREN SEMIC
+                |   procusage LPAREN arglist RPAREN SEMIC
+                |   LCURL statementlist RCURL;
+
+varname            ::= IDENT {
+                     mixin="org.intellij.sdk.language.psi.impl.SplNamedElementImpl"
+                     implements="org.intellij.sdk.language.psi.SplNamedElement"
+                     methods=[getProc getName setName getNameIdentifier]
+                     }
+
+varusage ::= IDENT {methods=[getProc setName getReferences]}
+
+vardecllist        ::= (COMMENT* vardecl)+;
+vardecl            ::= VAR varname COLON typeusage SEMIC
+                |   VAR varname COLON arr SEMIC;

@@ -1,17 +1,26 @@
 <idea-plugin>
-  <version>1.0-SNAPSHOT</version>
-  <change-notes>Add change notes here.&lt;br&gt;
-      &lt;em&gt;most HTML tags may be used&lt;/em&gt;</change-notes>
-  <idea-version since-build="211.7628" until-build="211.*" />
+  <version>2.0.0</version>
+  <idea-version since-build="203" until-build="214.*" />
   <id>org.example.spl_plugin</id>
   <name>SPL Language Support</name>
   <vendor email="marlon.berg@mni.thm.de" url="">THM</vendor>
-  <description><![CDATA[A Plugin for Simple Programming Language (SPL)<br>]]></description>
+  <description><![CDATA[A Plugin for Spl Programming Language (SPL)<br>]]></description>
   <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
          on how to target different products -->
   <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.java</depends>
   <extensions defaultExtensionNs="com.intellij">
-    <fileType name="SPL File" implementationClass="org.intellij.sdk.language.SPLFileType" fieldName="INSTANCE" language="SPL" extensions="spl" />
+    <fileType name="SPL File" implementationClass="org.intellij.sdk.language.SplFileType" fieldName="INSTANCE" language="SPL" extensions="spl" />
+    <lang.parserDefinition language="SPL" implementationClass="org.intellij.sdk.language.SplParserDefinition" />
+    <lang.syntaxHighlighterFactory language="SPL" implementationClass="org.intellij.sdk.language.SplSyntaxHighlighterFactory" />
+    <colorSettingsPage implementation="org.intellij.sdk.language.SplColorSettingsPage" />
+    <annotator language="SPL" implementationClass="org.intellij.sdk.language.SplAnnotator" />
+    <lang.refactoringSupport language="SPL" implementationClass="org.intellij.sdk.language.SplRefactoringSupportProvider" />
+    <lang.findUsagesProvider language="SPL" implementationClass="org.intellij.sdk.language.SplFindUsagesProvider" />
+    <completion.contributor language="SPL" implementationClass="org.intellij.sdk.language.SplCompletionContributor" />
+    <psi.referenceContributor language="SPL" implementation="org.intellij.sdk.language.SplReferenceContributor" />
+    <codeInsight.lineMarkerProvider language="SPL" implementationClass="org.intellij.sdk.language.SplLineMarkerProvider" />
+    <lang.foldingBuilder language="SPL" implementationClass="org.intellij.sdk.language.SplFoldingBuilder" />
   </extensions>
   <actions>
     <!-- Add your actions here -->
